@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Orbit Arcade — a playful collection of original browser games." />
+    <title>Orbit Arcade | Play now</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="overrides.css" />
+    <link rel="stylesheet" href="expansion.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Orbit Arcade home"><span class="brand-mark">◒</span> orbit<span>arcade</span></a>
+      <nav aria-label="Main navigation">
+        <a class="active" href="#home">Play</a>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="icon-button sound-button" id="soundToggle" aria-label="Turn sound on">♪</button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><i></i> ORIGINAL MINI GAMES</p>
+          <h1>A tiny escape<br /><em>at any time.</em></h1>
+          <p class="hero-text">Quick games with zero installs and no sign-up. Pick one, press play, and own the leaderboard.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#games">Explore games <b>↓</b></a>
+            <button class="button ghost" data-play="neon">Play featured <b>→</b></button>
+          </div>
+          <div class="player-strip"><span class="avatars"><i>J</i><i>K</i><i>M</i><i>R</i></span> <strong>4,800+</strong> players online</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="planet"><span>PLAY</span></div>
+          <div class="spark s1">✦</div><div class="spark s2">✦</div><div class="spark s3">+</div>
+          <div class="floating-card card-a"><small>TODAY'S STREAK</small><b>07 DAYS</b><span>● on fire</span></div>
+          <div class="floating-card card-b"><span class="score-dot">↗</span><small>YOUR BEST</small><b id="heroBest">2,480</b></div>
+        </div>
+      </section>
+
+      <section class="games-section" id="games">
+        <div class="section-heading">
+          <div><p class="eyebrow">GAME LIBRARY</p><h2>What are we playing?</h2></div>
+          <p class="count">06 games <span>•</span> always free</p>
+        </div>
+        <div class="game-grid">
+          <article class="game-card featured">
+            <div class="game-art neon-art"><span class="arcade-token">✦</span><div class="glowball"></div><p>MOVE. DODGE. GLOW.</p><span class="tag">FEATURED</span></div>
+            <div class="game-info"><div><p class="genre">ARCADE • 1 PLAYER</p><h3>Neon Dodge</h3></div><button class="play-round" data-play="neon" aria-label="Play Neon Dodge">→</button></div>
+          </article>
+          <article class="game-card">
+            <div class="game-art breaker-art"><div class="brick-stack"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mini-ball"></div><div class="paddle"></div><p>BREAK THE PATTERN</p></div>
+            <div class="game-info"><div><p class="genre">CLASSIC • 1 PLAYER</p><h3>Brick Bloom</h3></div><button class="play-round" data-play="breaker" aria-label="Play Brick Bloom">→</button></div>
+          </article>
+          <article class="game-card">
+            <div class="game-art memory-art"><div class="memory-cells"><i>✦</i><i>?</i><i>●</i><i>?</i><i>●</i><i>✦</i></div><p>FIND YOUR MATCH</p></div>
+            <div class="game-info"><div><p class="genre">PUZZLE • 1 PLAYER</p><h3>Pixel Pairs</h3></div><button class="play-round" data-play="memory" aria-label="Play Pixel Pairs">→</button></div>
+          </article>
+          <article class="game-card">
+            <div class="game-art comet-art"><span class="comet c-one">✦</span><span class="comet c-two">☄</span><span class="comet c-three">✦</span><div class="catcher">⌒</div><p>CATCH THE COMETS</p></div>
+            <div class="game-info"><div><p class="genre">ARCADE • 1 PLAYER</p><h3>Comet Catch</h3></div><button class="play-round" data-play="comet" aria-label="Play Comet Catch">→</button></div>
+          </article>
+          <article class="game-card">
+            <div class="game-art pulse-art"><span class="pulse p-one"></span><span class="pulse p-two"></span><span class="pulse p-three"></span><span class="pulse p-four"></span><p>TAP THE RHYTHM</p></div>
+            <div class="game-info"><div><p class="genre">REACTION • 1 PLAYER</p><h3>Pulse Garden</h3></div><button class="play-round" data-play="pulse" aria-label="Play Pulse Garden">→</button></div>
+          </article>
+          <article class="game-card">
+            <div class="game-art mail-art"><div class="moon">◒</div><div class="mail">✉</div><span class="satellite">✦</span><p>DELIVER TO THE MOON</p></div>
+            <div class="game-info"><div><p class="genre">ARCADE • 1 PLAYER</p><h3>Moon Mail</h3></div><button class="play-round" data-play="mail" aria-label="Play Moon Mail">→</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="about"><div class="about-star">✦</div><p class="eyebrow">MADE FOR A QUICK BREAK</p><h2>All play. <em>No clutter.</em></h2><p>Orbit Arcade is a simple home for original little games. They load in your browser, work with keyboard or touch, and remember your best scores right on your device.</p></section>
+    </main>
+
+    <footer><a class="brand" href="#home"><span class="brand-mark">◒</span> orbit<span>arcade</span></a><p>Made for better breaks.</p><p>© <span id="year"></span> Orbit Arcade</p></footer>
+
+    <dialog id="gameDialog" aria-labelledby="gameTitle">
+      <button class="close" id="closeGame" aria-label="Close game">×</button>
+      <section class="game-shell">
+        <div class="game-header"><div><p class="eyebrow" id="gameType">ARCADE • 1 PLAYER</p><h2 id="gameTitle">Neon Dodge</h2></div><div class="scoreboard"><span>LEVEL <b id="level">01</b></span><span>SCORE <b id="score">0000</b></span><span>BEST <b id="best">0000</b></span></div></div>
+        <div class="game-stage" id="stage">
+          <canvas id="gameCanvas" width="780" height="430" aria-label="Game canvas"></canvas>
+          <div class="memory-board" id="memoryBoard" hidden></div>
+          <div class="game-overlay" id="gameOverlay"><p class="eyebrow" id="overlayLabel">READY?</p><h3 id="overlayTitle">Catch the glow.</h3><p id="overlayHelp">Move with <kbd>←</kbd> <kbd>→</kbd> or your mouse. Avoid the falling shards.</p><button class="button primary" id="startGame">Start game <b>→</b></button></div>
+        </div>
+        <div class="game-controls" id="gameControls"><span><kbd>←</kbd><kbd>→</kbd> move</span><span>Last as long as you can</span></div>
+      </section>
+    </dialog>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app-v2.js"></script>
+  </body>
+</html>
