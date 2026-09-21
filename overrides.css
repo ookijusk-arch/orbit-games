@@ -1,0 +1,2 @@
+/* Reliability tweaks kept separate so the game layout is clear and easy to adjust. */
+.memory-board { display: grid; }
